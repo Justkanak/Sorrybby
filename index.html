@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+        
+    </head> 
+    <body>
+        <div class="container">
+            <div >
+                <h1 class = "header_text">Sorry babyy maaf krdo🥺</h1>
+                <h1 class = "header_text">👉🏻👈🏻</h1>
+            </div>
+            <div class="gif_container">
+                <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3c3VzaXVzNDJ2ZWRxam40eTViYWV4c3VqZnlydW81bmU3Nzc0Y2RxMCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/txp8Znj1ElHCIIaUbx/giphy.gif" alt="Cute animated illustration">
+            </div>
+            <div class = "buttons">
+                <button class="btn" id = "yesButton" onclick="nextPage()">Yes</button>
+                <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+            <script>
+const messages = [
+    "No",
+    "No please",
+    "Nope",
+    "Still no",
+    "Never 😜",
+    "Never babyy",
+    "Think again?",
+    "Please iloveyou",
+    "Babyyy🥺",
+    "Yes please",
+    "Mera bacha?",
+    "Yes this time",
+    "You the best",
+    "Pretty please",
+    "My love🫀",
+    "Accha sun lo 😭",
+    "Mat karo na 🥺",
+    "Ek chance dedo",
+    "Please yaar 😩",
+    "Dil tod doge kya 💔",
+    "Bas ek baar 🥹",
+    "I promise 🫶",
+    "Come on baby 😘",
+    "Stop being mean 😤",
+    "Main ro dunga 😭",
+    "Ok fine... but think again",
+    "You can't resist me 😏",
+    "Last chance 😌",
+    "Ab maan bhi jao ❤️",
+    "Pleaseeee 🥺👉👈"
+];
+
+let clickCount = 0;
+
+function nextPage() {
+    window.location.href = "yes.html";
+}
+
+function moveButton() {
+    const button = document.getElementById("noButton");
+
+    if (clickCount < messages.length) {
+        button.innerText = messages[clickCount];
+    }
+    clickCount++;
+
+    var x = Math.random() * (window.innerWidth - button.offsetWidth) - 85;
+    var y = Math.random() * (window.innerHeight - button.offsetHeight) - 48;
+
+    button.style.left = `${x}px`;
+    button.style.top = `${y}px`;
+}
+</script>
+            </div>
+        </div>
+       
+    </body> 
+</html>
