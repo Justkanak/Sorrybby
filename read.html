@@ -17,19 +17,31 @@
 </div>
 
 <script>
-const message = "I know i do hurt you a lot sometime but you are really special to me🥺❤️",
-    "I never want to see you sad, I genuinely care about you a lot🥺",
-    "I promise to keep you the happiest always, you mean everything to me",
-    "I will me a better man for you, a man who will love you forever🫶🏻",
-    "ILOVEYOU MERA BACHA🧿🫀";
+const messages = [
+    "I know I hurt you sometimes, but you are really special to me 🥺❤️",
+    "I never want to see you sad, I genuinely care about you a lot 🥺",
+    "I promise to keep you the happiest always, you mean everything to me 🫶🏻",
+    "I will be a better man for you, someone who will love you forever ❤️",
+    "ILOVEYOU MERA BACHA 🧿🫀"
+];
 
 let i = 0;
+let j = 0;
 
 function typeText() {
-    if (i < message.length) {
-        document.getElementById("text").innerHTML += message[i];
-        i++;
-        setTimeout(typeText, 40);
+    const textBox = document.getElementById("text");
+
+    if (i < messages.length) {
+        if (j < messages[i].length) {
+            textBox.innerHTML += messages[i][j];
+            j++;
+            setTimeout(typeText, 40);
+        } else {
+            textBox.innerHTML += "<br><br>";
+            i++;
+            j = 0;
+            setTimeout(typeText, 500);
+        }
     }
 }
 
