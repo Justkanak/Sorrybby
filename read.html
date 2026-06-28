@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 class="header_text">❤️ Read This</h1>
+
+    <p id="text"></p>
+
+    <button class="btn" onclick="goBack()">Back</button>
+
+</div>
+
+<script>
+const message = "You are really special to me ❤️ I may act silly sometimes, but I genuinely care about you a lot.";
+
+let i = 0;
+
+function typeText() {
+    if (i < message.length) {
+        document.getElementById("text").innerHTML += message[i];
+        i++;
+        setTimeout(typeText, 40);
+    }
+}
+
+typeText();
+
+function goBack() {
+    window.location.href = "yes.html";
+}
+</script>
+
+</body>
+</html>
