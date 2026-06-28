@@ -57,9 +57,9 @@ body {
     align-items: center;
 }
 .love_text {
-    font-size: 18px;
+    font-size: 21px;
     line-height: 1.7;
-    color: white;
+    color: black;
     text-align: center;
     max-width: 600px;
     margin: auto;
